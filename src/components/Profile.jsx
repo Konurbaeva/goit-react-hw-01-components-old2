@@ -1,6 +1,11 @@
+import PropTypes from 'prop-types';
+
 export const Profile= ({ user, stats})=>{
     const { avatar, username, tag, location} = user;
     const { followers, views, likes} = stats;
+
+    console.log('user typeof: ', user)
+    console.log('stats: ', stats)
 
     return (
         <div className="profile">
@@ -15,7 +20,7 @@ export const Profile= ({ user, stats})=>{
           <p className="location">{location}</p>
         </div>
       
-        <ul className="stats">
+{stats && <ul className="stats">
           <li>
             <span className="label">Followers</span>
             <span className="quantity">{followers}</span>
@@ -28,11 +33,12 @@ export const Profile= ({ user, stats})=>{
             <span className="label">Likes</span>
             <span className="quantity">{likes}</span>
           </li>
-        </ul>
+        </ul>}
       </div>
     )
 }
 
-// Profile.propTypes = {
-
-// }
+Profile.propTypes = {
+user: PropTypes.object,
+stats: PropTypes.object
+}
