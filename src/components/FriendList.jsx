@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
 
+// TODO 
+//В зависимости от пропа isOnline, должен меняться цвет фона span.status.
+// Это можно сделать через разный CSS-класс или Styled Components.
+
+
 export const FriendList = ({friends}) => {
     return (
     <ul className="friend-list">
@@ -14,7 +19,6 @@ export const FriendList = ({friends}) => {
 }
 
 FriendList.propTypes = {
-
 friends: PropTypes.arrayOf( 
     PropTypes.shape({
         avatar: PropTypes.string,
