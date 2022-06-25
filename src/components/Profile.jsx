@@ -10,6 +10,7 @@ export const Profile= ({ user, stats})=>{
           <img
             src={avatar}
             alt={avatar}
+            width="150"
             className="avatar"
           />
           <p className="name">{username}</p>
