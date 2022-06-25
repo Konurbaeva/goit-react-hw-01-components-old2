@@ -1,4 +1,5 @@
-export const Profile= ({ avatar, username, tag, location, stats})=>{
+export const Profile= ({ user, stats})=>{
+    const { avatar, username, tag, location} = user;
     const { followers, views, likes} = stats;
 
     return (
