@@ -9,10 +9,6 @@ export const App = () => {
   user={user}
   stats={user.stats}
 />
-<Profile
-  user={user}
-
-/>
     </div>
   );
 };
