@@ -2,7 +2,8 @@ export const Stats = ({stats}) => {
     const { followers, views, likes} = stats;
     return (
        <>
-        {stats && (<ul className="stats">
+        {stats && (
+        <ul className="stats">
           <li>
             <span className="label">Followers</span>
             <span className="quantity">{followers}</span>
@@ -15,7 +16,8 @@ export const Stats = ({stats}) => {
             <span className="label">Likes</span>
             <span className="quantity">{likes}</span>
           </li>
-        </ul>)}
+        </ul>
+        )}
        </>
     )
 }
