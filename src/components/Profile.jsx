@@ -1,40 +1,24 @@
 import PropTypes from 'prop-types';
+import { ProfileItem } from './ProfileItem';
+import { Stats } from './Stats';
+
 
 export const Profile= ({ user, stats})=>{
-    const { avatar, username, tag, location} = user;
-    const { followers, views, likes} = stats;
+  const { avatar, username, tag, location} = user;
 
-    return (
-        <div className="profile">
-        <div className="description">
-          <img
-            src={avatar}
-            alt={avatar}
-            width="150"
-            className="avatar"
-          />
-          <p className="name">{username}</p>
-          <p className="tag">{tag}</p>
-          <p className="location">{location}</p>
-        </div>
-      
-{stats && (<ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{followers}</span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="quantity">{views}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{likes}</span>
-          </li>
-        </ul>)}
-      </div>
-    )
+  return (
+<>
+<ProfileItem
+avatar={avatar} 
+username={username} 
+tag={tag} 
+location={location}
+/>
+<Stats stats={stats}/>
+</>   
+ )
 }
+
 
 Profile.propTypes = {
 user: PropTypes.shape({
