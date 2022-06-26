@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { FriendListItem } from './FriendListItem';
 
 // TODO 
 //В зависимости от пропа isOnline, должен меняться цвет фона span.status.
@@ -7,15 +8,14 @@ import PropTypes from 'prop-types';
 
 export const FriendList = ({friends}) => {
     return (
-    <ul className="friend-list">
-    {friends.map(({avatar, name, isOnline}) => (
-   <li className="item" key={name}>
-  <span className={isOnline ? 'online' : 'offline'}></span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-  <p className="name">{name}</p>
-</li>
- ))}
-</ul>)
+<>
+<ul className="friend-list">
+    {friends.map((friend) => (
+  <FriendListItem  friend={friend} key={friend.id}/>
+  ))}
+</ul>
+</>
+)
 }
 
 FriendList.propTypes = {

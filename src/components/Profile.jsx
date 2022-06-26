@@ -4,15 +4,10 @@ import { Stats } from './Stats';
 
 
 export const Profile= ({ user, stats})=>{
-  const { avatar, username, tag, location} = user;
-
   return (
 <>
 <ProfileItem
-avatar={avatar} 
-username={username} 
-tag={tag} 
-location={location}
+user={user}
 />
 <Stats stats={stats}/>
 </>   

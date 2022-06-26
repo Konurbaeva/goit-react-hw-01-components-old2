@@ -1,4 +1,5 @@
-export const ProfileItem = ({ avatar, username, tag, location}) => {
+export const ProfileItem = ({ user}) => {
+    const {  avatar, username, tag, location }  = user;
     return (
         <div className="profile">
         <div className="description">
