@@ -2,10 +2,6 @@ import { Profile } from './Profile'
 import { Statistics } from './Statistics';
 import { FriendList } from './FriendList';
 import { TransactionHistory } from './TransactionHistory';
-// import user from '../user.json'
-// import data from '../data.json';
-// import friends from '../friends.json';
-// import transactions from '../transactions.json';
 import user from './mock/user.json';
 import data from './mock/data.json';
 import friends from './mock/friends.json';
