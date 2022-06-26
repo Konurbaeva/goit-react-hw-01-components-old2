@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-// TODO 
-//В зависимости от пропа isOnline, должен меняться цвет фона span.status.
-// Это можно сделать через разный CSS-класс или Styled Components.
-
 const Span = styled.span(({ isOnline }) => ({
     background: isOnline ? 'green' : 'red'
   }));
