@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import { ProfileItem } from './ProfileItem';
 import { Stats } from './Stats';
+import { Card } from './ui/card';
 
 
 export const Profile= ({ user, stats})=>{
   return (
 <>
+<Card>
 <ProfileItem
 user={user}
 />
 <Stats stats={stats}/>
+</Card>
 </>   
  )
 }
