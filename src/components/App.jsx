@@ -15,7 +15,7 @@ export const App = () => {
   user={user}
   stats={user.stats}
 />
-<Statistics stats={data} color={'blue'}/>
+<Statistics stats={data} />
 <FriendList friends={friends}/>
 <TransactionHistory items={transactions}/>
     </div>
