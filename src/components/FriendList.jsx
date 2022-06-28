@@ -5,7 +5,6 @@ import { Card } from './ui/card';
 export const FriendList = ({friends}) => {
     return (
 <>
-
 <ul className="friend-list">
     {friends.map((friend) => (
         <Card>
@@ -13,7 +12,6 @@ export const FriendList = ({friends}) => {
   </Card>
   ))}
 </ul>
-
 </>
 )
 }
