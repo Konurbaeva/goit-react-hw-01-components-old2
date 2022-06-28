@@ -1,23 +1,20 @@
 import styled from 'styled-components'
 
-const Span = styled.span(({ isOnline }) => ({
-    background: isOnline ? 'green' : 'red'
-  }));
+const ListItem = styled.li(({ isOnline }) => ({
+  color: isOnline ? 'green' : 'red'
+}));
 
 export const FriendListItem = ({ friend }) => {
-    const { name, isOnline, avatar, id } = friend;
-    
-    return (
-        <>
-   <li className="item" key={id}>
-  <Span 
-  isOnline={isOnline}
-   ></Span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-  <Span 
-  isOnline={isOnline}
-   >{name}</Span>
-</li>
- </>
- )
+  const { name, isOnline, avatar, id } = friend;
+  
+  return (
+      <>
+ <ListItem className="item" key={id} isOnline={isOnline}>
+<img className="avatar" src={avatar} alt="User avatar" width="48" />
+<span>
+{name}
+</span>
+</ListItem>
+</>
+)
 }
