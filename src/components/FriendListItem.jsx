@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const ListItem = styled.li(({ isOnline }) => ({
-  color: isOnline ? 'green' : 'red'
+  color: isOnline ? 'green' : 'red',
+  width:'30px',
 }));
 
 export const FriendListItem = ({ friend }) => {

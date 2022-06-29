@@ -6,11 +6,11 @@ export const FriendList = ({friends}) => {
     return (
 <>
 <ul className="friend-list">
+<Card>
     {friends.map((friend) => (
-        <Card>
   <FriendListItem  friend={friend} key={friend.id}/>
-  </Card>
   ))}
+   </Card>
 </ul>
 </>
 )
